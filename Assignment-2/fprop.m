@@ -52,7 +52,7 @@ inputs_to_hidden_units = embed_to_hid_weights' * embedding_layer_state + ...
 % Apply logistic activation function.
 % FILL IN CODE. Replace the line below by one of the options.
 %hidden_layer_state = zeros(numhid2, batchsize);
-hidden_layer_state = 1 ./ (1 + exp(inputs_to_hidden_units));
+hidden_layer_state = 1 ./ (1 + exp(-inputs_to_hidden_units));
 % Options
 % (a) hidden_layer_state = 1 ./ (1 + exp(inputs_to_hidden_units));
 % (b) hidden_layer_state = 1 ./ (1 - exp(-inputs_to_hidden_units));
